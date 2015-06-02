@@ -29,5 +29,7 @@ namespace Lunch2Go.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Lunch2Go.Models.product> products { get; set; }
     }
 }

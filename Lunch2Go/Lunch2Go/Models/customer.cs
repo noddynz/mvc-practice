@@ -11,6 +11,7 @@ namespace Lunch2Go.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class customer
     {
@@ -18,7 +19,7 @@ namespace Lunch2Go.Models
         {
             this.order = new HashSet<order>();
         }
-    
+        [Key]
         public int customer_id { get; set; }
         public int card_id { get; set; }
         public string password { get; set; }

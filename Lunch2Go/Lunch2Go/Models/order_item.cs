@@ -11,9 +11,11 @@ namespace Lunch2Go.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class order_item
     {
+        [Key]
         public int order_id { get; set; }
         public int product_id { get; set; }
         public Nullable<int> qty { get; set; }

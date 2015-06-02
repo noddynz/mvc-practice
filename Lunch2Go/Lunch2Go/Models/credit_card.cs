@@ -11,6 +11,8 @@ namespace Lunch2Go.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
     
     public partial class credit_card
     {
@@ -18,8 +20,9 @@ namespace Lunch2Go.Models
         {
             this.customer = new HashSet<customer>();
         }
-    
+        [Key][Column(Order = 0)]
         public int card_id { get; set; }
+        [Key][Column(Order = 1)]
         public string card_type { get; set; }
     
         public virtual ICollection<customer> customer { get; set; }
