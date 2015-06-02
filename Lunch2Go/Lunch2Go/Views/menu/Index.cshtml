@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Lunch2Go.Models.product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!--Build Everything Within This Div-->
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="row h4">
+                        @Html.DisplayFor(modelItem => item.name)
+                    </div>
+                    <div class="row">
+                        <img src=@Html.DisplayFor(modelItem => item.image) class="img-thumbnail" alt=@Html.DisplayFor(modelItem => item.name) width="300" height="250">
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-default">
+                            Add  >>
+                        </button>
+                    </div>
+                </div>
+                
+            }
+        </div>
+    </div>
+</div>
