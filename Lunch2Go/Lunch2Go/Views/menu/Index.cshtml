@@ -12,7 +12,7 @@
             <!--Build Everything Within This Div-->
             @foreach (var item in Model)
             {
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-lg-offset-1">
                     <div class="row h4">
                         @Html.DisplayFor(modelItem => item.name)
                     </div>
@@ -20,13 +20,13 @@
                         <img src=@Html.DisplayFor(modelItem => item.image) class="img-thumbnail" alt=@Html.DisplayFor(modelItem => item.name) width="300" height="250">
                     </div>
                     <div class="row">
-                        <button type="button" class="btn btn-default">
+                        <button type="button" class="btn btn-default pull-right">
                             Add  >>
                         </button>
                     </div>
                 </div>
-                
             }
+
         </div>
     </div>
 </div>
